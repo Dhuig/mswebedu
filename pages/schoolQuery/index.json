@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "experiencevip": "../../component/experience_VIP/experience_VIP",
+    "footerlist": "../../component/footerlist/footerlist",
+    "buttonvip": "../../component/button/button",
+    "authorization": "../../component/authorization/authorization",
+    "sidebar": "../../component/sidebar/sidebar",
+    "avatar": "../../component/avatar/index"
+  }
+}

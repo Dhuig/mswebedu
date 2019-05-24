@@ -1,0 +1,8 @@
+<view >
+  <view class='drawer_screen' style="{{status?'display:block;':'display:none;'}}" />
+  <view class='drawer_box' style="{{status?'display:block;':'display:none;'}}">
+    <image class='imagees' src="../../images/becomeVIP.png" mode="widthFix"></image>
+    <image class='image01' src="../../images/shut_down.png" mode="widthFix"  bindtap='cancleBtn' ></image>
+    <view class="vipbecome" bindtap='govipPay'></view>
+  </view>
+</view>

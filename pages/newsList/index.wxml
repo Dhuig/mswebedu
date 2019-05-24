@@ -1,0 +1,106 @@
+
+
+  <!--内容-->
+  <view class="ui-path2-layout" data-hidden="{{sideShow}}">
+  	   
+  	   <!--顶部导航条-公共布局-->   
+       <view class="public-topNav-layout clearfix">
+           <text class="userHead"></text>
+           <view class="grade">
+             <text class="text lh">分数</text>
+             <text class="count lh">{{member.before_score}}</text>
+         </view>
+         <view class="grade">
+             <text class="text lh">折算分</text>
+             <text class="count lh">{{member.group!=0 ? member.before_g_score : '***'}}</text>
+           </view>
+           <view class="grade">
+             <text class="text lh">排名</text>
+             <text class="count lh">{{member.group!=0 ? member.before_g_ranking : '***'}}</text>
+           </view>
+       </view>
+       <!--顶部导航条-公共布局 end-->
+
+  	   <view class="banner" style="background-image: url({{member.resources_banner}});"></view>
+
+       <view class="ui-tab-layout-new">
+           <view class="ui-tab-head clearfix" data-type="{{type}}">
+              <view class="ui-tab-title" bindtap="msgtypegh">凌志干货</view>
+              <view class="ui-tab-title" bindtap="msgtypemx">名校简介</view>
+              <view class="ui-tab-title" bindtap="msgtypezy">专业职业介绍</view>
+              <view class="ui-tab-title" bindtap="msgtypesp">视 频</view>
+           </view>
+           <view class="ui-divder"></view>
+           <view class="ui-tab-content page-interval">
+               <view class="ui-news-layout" data-layout='2' data-page='{{pageState}}'>
+
+                   <view class="list" wx:for="{{dataArr}}" wx:key data-state='{{item.is_lock}}' bindtap="detailTap" data-type="{{type}}" data-id="{{item.id}}">
+                       <view class="name"><text class="label">[试看]</text>{{item.title}}</view>
+                       <view class="desc"><text class="ui-news-tag">试看</text> 发布人：{{item.editor}}<text class="ml-40"></text> 时间：{{item.publish_time}}</view>
+                   </view>
+
+               </view>
+           </view>
+       </view>
+
+       <!-- VIP选项 -->
+      <view class="ui-footer-fixed bottom page-interval" data-state="{{vipState}}" data-status="{{groups_status}}">
+           <view class="ui-btn-group clearfix">
+               <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+               <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+
+               <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+
+           </view>
+      </view>
+
+      <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+
+
+       <!-- 提示弹窗 -->
+      <view class="ui-pop-layout" data-show="{{tipPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">成为VIP</view>
+              <view class="ui-pop-content">
+                 <view class="ui-btn-group page-interval clearfix" data-state="{{vipState}}" data-status="{{groups_status}}">
+                     <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+                     <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+                     <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+                 </view>
+              </view>
+              <!--
+              <view class="ui-pop-footer clearfix">
+                <view class="ui-pop-btn">取消</view>
+                <view class="ui-pop-btn">确认</view>
+              </view>
+            -->
+           </view>
+           <view class="ui-pop-mask" bindtap="tipPopTap"></view>
+      </view>
+      <!-- 提示弹窗 end-->
+
+      <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap"></view>
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+      <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+	   
+  </view>   
+  <!--内容 end-->
+  
+
+  <!-- 三天体验弹框 与按钮   -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+
+
+ <!-- 底部导航栏 -->
+ <footerlist stylestatus="高考资讯" />
+
+  
+ 

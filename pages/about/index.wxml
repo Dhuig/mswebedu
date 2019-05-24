@@ -1,0 +1,33 @@
+
+
+  <!--内容-->
+  <view class="ui-path-layout" data-hidden="{{sideShow}}" >
+  	   
+       <view class="aboutInfo">
+           <!-- <icon class="icon-about"></icon> -->
+           <image class="icon-about" src="../../images/icon-4.png"></image>
+           <view class="subtitle">联系我们</view>
+           <!--<view class="tel">13266403366</view>-->
+       </view>
+
+       <view class="wxInfo">
+           <image class="wxCode" src="{{bill_qrcode}}"></image>
+           <view class="wxText">扫码上方二维码</view>
+           <view class="wxText">可联系在线客服</view>
+       </view>
+
+       <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+
+  </view>   
+  <!--内容 end-->
+ 
+  
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end  style="{{status?'display:block;':'display:none;'}}"  -->
+
+ <!-- 底部导航栏 -->
+ <footerlist stylestatus="" />
+ 
+ 

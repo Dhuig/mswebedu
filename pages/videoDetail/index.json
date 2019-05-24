@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "experiencevip": "../../component/experience_VIP/experience_VIP",
+    "footerlist": "../../component/footerlist/footerlist",
+    "buttonvip": "../../component/button/button",
+    "authorization": "../../component/authorization/authorization"
+  }
+}

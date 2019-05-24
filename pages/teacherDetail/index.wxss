@@ -1,0 +1,16 @@
+  /**index.wxss**/
+
+
+.banner{ height: 226rpx; background: #f6b13c url(https://gk2.mingshiedu.com/html/images/icon-15.jpg) no-repeat; background-size: cover; }
+.ui-btn-user{ background-image: url(https://gk2.mingshiedu.com/html/images/icon-6.png); }
+
+.teacherItem{ position: relative; text-align:center; } 
+.teacherItem .teacherHead{ width: 206rpx; height: 206rpx; margin:-103rpx auto 0 auto; border:4rpx solid #ddd; border-radius: 50%; background: #aaa url() no-repeat; background-size: cover;}
+.teacherItem .teacherName{ margin: 20rpx 0; color: #19ad19;}
+.teacherItem .descText{ line-height: 1.2; font-size: 24rpx;  }
+.teacherItem .descText text{ margin-left: 20rpx; }
+
+.ui-intro-layout{ margin-top: -30rpx; }
+.wxInfo{ padding: 40rpx 0; }
+
+

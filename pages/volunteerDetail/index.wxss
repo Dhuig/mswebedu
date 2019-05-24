@@ -1,0 +1,16 @@
+/**index.wxss**/
+
+.ui-path2-layout {padding-bottom:200rpx;}
+
+.school-item .title{ padding:40rpx 0; font-size: 32rpx;background:#f3f3f3;  }
+.school-item .title icon{ display: inline-block;position: relative; top: -8rpx; width: 50rpx; height: 50rpx; margin-right: 10rpx; vertical-align: middle; background:url(https://gk2.mingshiedu.com/html/images/icon-7.png) no-repeat; background-size:contain; }
+
+ .main{ padding-top: 30rpx; }
+ .ui-table-view:last-child .ui-hr-line{ display: none; }
+
+
+
+.view-table-layout .thead .th:nth-child(1){ width: 120rpx;}
+.view-table-layout .thead .th:nth-child(2){ width: 130rpx; text-align: center; }
+.view-table-layout .thead .th:nth-child(3){ width: 260rpx; text-align: left; }
+.view-table-layout .thead .th:nth-child(4){ width: 210rpx; }

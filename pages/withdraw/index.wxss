@@ -1,0 +1,10 @@
+/**index.wxss**/
+
+
+.recommendMoney{ padding:80rpx 0; text-align: center; }
+.recommendMoney .icon-money{ display: block; width:170rpx; height: 170rpx; margin:0 auto 20rpx auto; border-radius: 50%; background: #aaa url(https://gk2.mingshiedu.com/html/images/icon-9.png) no-repeat; background-size: cover; }
+.recommendMoney .text .price{ font-size: 40rpx; font-family:"Arial"; font-weight: 600; color: #19ad19; }
+
+.ui-form-price{ position: relative; }
+.ui-form-price .ui-form-input{ padding-left:60rpx; border-color:transparent transparent #ddd transparent; }
+.ui-form-price .unit{ position: absolute; left: 0; top:60rpx; font-size:40rpx; font-family:"Arial";}

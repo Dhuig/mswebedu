@@ -1,0 +1,62 @@
+/**index.wxss**/
+
+.ui-btn-user{ position: fixed; }
+.banner{ position: fixed; left: 0; top: 0; z-index: 4; width: 100%; height: 226rpx; background:#aaa url() no-repeat; background-size: cover; }
+.ui-collect-layout{ margin-left:100rpx; margin-top: 226rpx;padding-right: 20rpx; }
+
+.ui-collect-layout .path{ display: none; }
+.ui-collect-layout[data-select="all"] .path{ display: block; }
+
+
+.ui-collect-layout[data-select="A"] .path[data-anchor="A"]{ display: block; }
+.ui-collect-layout[data-select="B"] .path[data-anchor="B"]{ display: block; }
+.ui-collect-layout[data-select="C"] .path[data-anchor="C"]{ display: block; }
+.ui-collect-layout[data-select="D"] .path[data-anchor="D"]{ display: block; }
+.ui-collect-layout[data-select="E"] .path[data-anchor="E"]{ display: block; }
+.ui-collect-layout[data-select="F"] .path[data-anchor="F"]{ display: block; }
+.ui-collect-layout[data-select="G"] .path[data-anchor="G"]{ display: block; }
+
+.ui-collect-layout[data-select="H"] .path[data-anchor="H"]{ display: block; }
+.ui-collect-layout[data-select="I"] .path[data-anchor="I"]{ display: block; }
+.ui-collect-layout[data-select="J"] .path[data-anchor="J"]{ display: block; }
+.ui-collect-layout[data-select="K"] .path[data-anchor="K"]{ display: block; }
+.ui-collect-layout[data-select="L"] .path[data-anchor="L"]{ display: block; }
+.ui-collect-layout[data-select="M"] .path[data-anchor="M"]{ display: block; }
+.ui-collect-layout[data-select="N"] .path[data-anchor="N"]{ display: block; }
+
+
+.ui-collect-layout[data-select="O"] .path[data-anchor="O"]{ display: block; }
+.ui-collect-layout[data-select="P"] .path[data-anchor="P"]{ display: block; }
+.ui-collect-layout[data-select="Q"] .path[data-anchor="Q"]{ display: block; }
+
+.ui-collect-layout[data-select="R"] .path[data-anchor="R"]{ display: block; }
+.ui-collect-layout[data-select="S"] .path[data-anchor="S"]{ display: block; }
+.ui-collect-layout[data-select="T"] .path[data-anchor="T"]{ display: block; }
+
+.ui-collect-layout[data-select="U"] .path[data-anchor="U"]{ display: block; }
+.ui-collect-layout[data-select="V"] .path[data-anchor="V"]{ display: block; }
+.ui-collect-layout[data-select="W"] .path[data-anchor="W"]{ display: block; }
+.ui-collect-layout[data-select="X"] .path[data-anchor="X"]{ display: block; }
+.ui-collect-layout[data-select="Y"] .path[data-anchor="Y"]{ display: block; }
+.ui-collect-layout[data-select="Z"] .path[data-anchor="Z"]{ display: block; }
+
+
+.teacher-list .teacherItem{  position:absolute; left: -9999rpx; padding: 24rpx 0; border-bottom: 2rpx solid #ddd; } 
+.teacher-list[data-state='1'] .teacherItem{ position: relative; left: 0; }
+.teacher-list .teacherItem .teacherHead{ float: left; width: 96rpx; height: 96rpx;background: #aaa url() no-repeat; background-size: cover;}
+.teacher-list .teacherItem .teacherInfo{ margin-left: 130rpx; }
+.teacher-list .teacherItem .teacherName{ margin-bottom: 10rpx;}
+.teacher-list .teacherItem .descText{ line-height: 1.2; font-size: 24rpx; color: #666; }
+.teacher-list .teacherItem:before{ content: ""; position: absolute; right: 40rpx; top: 50%; width: 30rpx; height: 30rpx; margin-top: -15rpx; background:url(https://gk2.mingshiedu.com/html/images/icon-3.png) no-repeat right center; background-size:contain;}
+
+
+
+
+.submenu-fixation{ position:fixed; top:226rpx; left: 0; bottom: 102rpx; overflow: auto; width:100rpx;text-align:center;}
+.submenu-fixation view{ margin:20rpx 0; font-size: 32rpx; color: #19ad19; }
+.submenu-fixation view[data-current=true]{ color:#f60;}
+
+
+.ui-collect-layout .subtitle{ padding-top:30rpx; padding-bottom: 30rpx;  }
+.icon-collect2{ top: 48rpx; }
+.keyTitle{ /*padding-top: 40rpx;*/ font-size: 40rpx; }

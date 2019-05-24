@@ -1,0 +1,86 @@
+
+
+  <!--内容-->
+  <view class="ui-path2-layout" data-hidden="{{sideShow}}">
+  	
+  	   <view class="banner" style="background-image: url({{member.college_banner}});"></view>
+
+  	   <!--教师列表-->
+      <view class="ui-collect-layout" data-page="{{pageState}}" data-select="{{selectState}}">
+
+               <view class="path" wx:for="{{dataArr}}" data-anchor="{{item.key}}" wx:key >
+                   <view class="keyTitle">{{item.key}}</view>
+                   <view class="item teacher-list" wx:for="{{item.college}}" wx:for-index="cidx" wx:for-item="citem" data-state="{{citem.state}}" wx:key >
+                    <view class="subtitle" bindtap="foldTap" data-pidx="{{index}}" data-index="{{cidx}}">{{citem.college_name}} ({{citem.teacher.length}})</view>
+
+                       <text class="icon-collect icon-collect2" bindtap="collectTap" data-id="{{citem.college_name}}" data-current="{{citem.collection}}" data-pidx="{{index}}" data-index="{{cidx}}"></text>
+
+                      <view class="teacherItem clearfix" wx:for="{{citem.teacher}}" wx:for-item="sitem" data-id="{{sitem.id}}" bindtap="teacherTap" wx:key >
+                        <view class="teacherHead" style="background-image: url({{sitem.photo}});"></view>
+                        <view class="teacherInfo">
+                          <view class="teacherName">{{sitem.name}}</view>
+                          <view class="descText">职称：{{sitem.professional}}</view>
+                          <view class="descText">专业：{{sitem.major}}</view>
+                        </view>
+                      </view>
+
+                   </view>
+               </view>
+            
+           </view> 
+  	   		<!-- 右边 end-->
+
+  	   		<!--悬浮字母导航-->
+  	   		<view class="submenu-fixation">
+
+  	   			<view wx:for="{{anchor}}" bindtap="anchor" data-anchor="{{item.name=='全' ? '':item.name}}" data-index='{{index}}' data-current="{{item.current}}" wx:key >{{item.name}}</view>
+
+  	   		</view>
+  	   		<!--悬浮字母导航 end-->
+
+
+      <!-- 提示弹窗 -->
+      <view class="ui-pop-layout" data-show="{{tipPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">成为VIP</view>
+              <view class="ui-pop-content">
+                 <view class="ui-btn-group page-interval clearfix" data-state="{{vipState}}" data-status="{{groups_status}}">
+                     <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+                     <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+                     <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+                 </view>
+              </view>
+              <!--
+              <view class="ui-pop-footer clearfix">
+                <view class="ui-pop-btn">取消</view>
+                <view class="ui-pop-btn">确认</view>
+              </view>
+            -->
+           </view>
+           <view class="ui-pop-mask" bindtap="tipPopTap"></view>
+      </view>
+      <!-- 提示弹窗 end-->
+
+
+      <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap"></view>
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+      <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+      <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+	   
+  </view>   
+  <!--内容 end-->
+  
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+  
+   <!-- 底部导航栏 -->
+ <footerlist stylestatus="院校列表" />
+ 

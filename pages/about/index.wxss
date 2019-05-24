@@ -1,0 +1,8 @@
+/**index.wxss**/
+.aboutInfo{ padding:120rpx 0; text-align: center; }
+.aboutInfo .icon-about{ width: 200rpx; display: block; height: 172rpx; margin:auto;background-size: contain;  }
+.aboutInfo .subtitle{ padding: 20rpx 0; }
+.aboutInfo .tel{ font-size: 40rpx; color: #f8a837; }
+
+
+.wxInfo .wxText{ margin-bottom: 10rpx; }

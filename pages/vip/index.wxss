@@ -1,0 +1,6 @@
+/**index.wxss**/
+
+.wxPoster{ height: 831rpx; background:url() no-repeat; background-size:100%;  }
+
+
+.wxInfo{ padding:40rpx 0; }

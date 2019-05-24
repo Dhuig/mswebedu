@@ -1,0 +1,29 @@
+/**index.wxss**/
+
+page{ background: #f2f2f2; }
+
+.school-item .title{ padding:40rpx 0; font-size: 32rpx;}
+
+.school-item .title icon{ display: inline-block; position: relative; top: -8rpx; width: 50rpx; height: 50rpx; margin-right: 10rpx; vertical-align: middle; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-10.png) no-repeat center center; background-size: contain; }
+.school-item .subtitle{ padding:20rpx 0; font-size: 30rpx; }
+
+
+.footer{ padding-bottom: 30rpx; }
+.footer .tip-text{ margin:40rpx 0 10rpx 0; text-align:center; font-size: 22rpx; color: #999;  }
+.footer .subtitle{ position: relative; margin:30rpx 0; text-align: center; }
+.footer .subtitle text{ position: relative; z-index: 3; display: inline-block; padding:0 10rpx; background: #f2f2f2; }
+.footer .subtitle:before{ content: ""; position:absolute; left: 0; top: 50%; width: 100%; border-bottom:2rpx solid #ddd; }
+
+
+
+.other-btn{ display: none; }
+.footer .footer-item{ display: none; }
+.footer .footer-item[data-state="0"]{ display:block; }
+.footer .footer-item[data-status="0"] .ui-btn-group .ui-btn-block{ display: none; }
+.footer .footer-item[data-status="0"] .ui-btn-group .other-btn{ display: block; float: none; width: 100%; }
+
+
+
+/** 去掉拼团按钮 2018-06-13 **/
+.footer .ui-btn-group .ui-btn-block:nth-child(1){ display: none; }
+.footer .ui-btn-group .ui-btn-block:nth-child(2){ display:block; float: none; width: auto; }

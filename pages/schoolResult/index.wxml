@@ -1,0 +1,105 @@
+
+
+  <!--内容-->
+  <view scroll-y class='ui-path-layout' data-hidden="{{sideShow}}">
+
+  	   <!--顶部导航条-公共布局-->   
+       <view class="public-topNav-layout clearfix">
+           <text class="userHead"></text>
+           <view class="grade">
+             <text class="text lh">分数</text>
+             <text class="count lh">{{member.before_score}}</text>
+         </view>
+         <view class="grade">
+             <text class="text lh">折算分</text>
+             <text class="count lh">{{member.group!=0 ? member.before_g_score : '***'}}</text>
+           </view>
+           <view class="grade">
+             <text class="text lh">排名</text>
+             <text class="count lh">{{member.group!=0 ? member.before_g_ranking : '***'}}</text>
+           </view>
+       </view>
+       <!--顶部导航条-公共布局 end-->
+
+  	   <!--学校-->
+  	   <view class="school-item" data-vip="{{member.group}}">
+  	   		<view class="title page-interval">
+            <image class='icon' src="../../images/icon-7.png"></image> 志愿填报推荐顺序 
+            <view class="vip-btn" bindtap="vipPay2Tap" >成为VIP</view>
+            <view class="link-btn" bindtap="rankingLinkTap" >省内高校排名</view>
+          </view>
+  	   		<view class="ui-table-layout page-interval">
+  	   			<view class="ui-table-thead">
+
+  	   				<view class="ui-table-tr clearfix" style="opacity: 1;">
+	  	   				<text class="td"> </text>
+	  	   				<text class="td">序号</text>
+	  	   				<text class="td">学校代码</text>
+	  	   				<text class="td">学校名称</text>
+                <text class="td">最低排位</text>
+  	   				</view>
+           </view>
+           <view class="ui-table-tbody"> 
+<!--判断如果不是vip，data-type就显示*，参数3是传给app.wxss-->    
+               <view class="ui-table-tr clearfix" wx:for="{{dataArr}}" wx:key data-type="{{member.group!=0 ? item.abc : 3}}" data-vip="{{member.group}}">
+           
+                <text class="td" bindtap="detailTap" data-code="{{item.academy_code}}" data-type="{{member.group!=0 ? item.abc : 3}}"> </text>
+                <text class="td" bindtap="detailTap" data-code="{{item.academy_code}}">{{ index+1 }}</text>
+                <view class="td" bindtap="detailTap" data-code="{{item.academy_code}}"><text>{{ item.academy_code }}</text></view>
+
+                <view class="td ellipsis" bindtap="detailTap" data-code="{{item.academy_code}}"><text>{{ item.academy_name }}</text></view>
+
+                <view class="td"><text>{{member.group!=0 ? item.ranking_min : '****'}}</text></view>
+                <text class="icon-collect" bindtap="collectTap" data-id="{{item.id}}" data-index="{{index}}" data-current='{{item.collection}}' data-type='1'></text>
+              </view>
+
+  	   			</view>
+  	   		</view>
+  	   </view>
+  	   <!--学校 end-->
+
+       <!-- 提示弹窗 -->
+      <view class="ui-pop-layout" data-show="{{tipPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">成为VIP</view>
+              <view class="ui-pop-content">
+                 <view class="ui-btn-group page-interval clearfix" data-state="{{vipState}}" data-status="{{groups_status}}">
+                     <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+                     <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+                     <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+                 </view>
+              </view>
+              <!--
+              <view class="ui-pop-footer clearfix">
+                <view class="ui-pop-btn">取消</view>
+                <view class="ui-pop-btn">确认</view>
+              </view>
+            -->
+           </view>
+           <view class="ui-pop-mask" bindtap="tipPopTap"></view>
+      </view>
+      <!-- 提示弹窗 end-->
+
+       <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap"></view>
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+      <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+      <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+	   
+  </view>
+  <!--内容 end-->
+
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+  
+   <!-- 底部导航栏 -->
+ <footerlist stylestatus="" />
+ 
+ 

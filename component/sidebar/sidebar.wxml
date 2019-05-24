@@ -1,0 +1,34 @@
+
+  	  <view class="public-side-fixeds" >
+  	  	   <view class="sideBox">
+
+  	  	   	   <view class="userItem page-intervals">
+		  	  	   <view class="userIntro clearfixs">
+               <view class='vip' style="{{member.group ==='1'?'display:block;':'display:none;'}}">VIP</view>
+		  	  	   	   <view class="userHead" style="background-image:url({{avatarUrl}});" ></view>
+		  	  	   	   <view class="userName ellipsiss">{{avatarName}}<text ></text></view>
+		  	  	   </view>
+		  	  	   <view class="brokerage">
+                <icon class="icon-brokerage icon"></icon>
+                推荐奖金 <text class="price">{{member.commission}}</text>
+               </view>
+		  	  	   <view class="ui-btn-group clearfixs">
+		  	  	   	   <view class="ui-btn-block" bindtap="withdrawLink1Tap">提现</view>
+		  	  	   	   <view class="ui-btn-block" bindtap="tipPopTap" style="{{member.group ==='0'?'display:block;':'display:none;'}}">成为VIP</view>
+		  	  	   </view>
+	  	  	   </view>
+
+	  	  	   <view class="ui-menu-list page-intervals">
+	  	  	   	   <view class="subtitle" bindtap="recommendLinkTap"><icon class='icon'></icon>推荐记录</view>
+	  	  	   	   <view class="subtitle" bindtap="expenditureLinkTap"><icon class='icon'></icon>消费记录</view>
+	  	  	   	   <view class="subtitle" bindtap="withdrawLink2Tap"><icon class='icon'></icon>提现记录</view>
+                  <!-- 2018/9/7 关闭该功能 -->
+	  	  	   	   <view class="subtitle" bindtap="aboutLinkTap"><icon class='icon'></icon>联系我们</view>
+                 <view class="subtitle" bindtap="posterLinkTap"><icon class='icon'></icon>我的海报</view>
+                 <view class="subtitle" bindtap="volunteerLink2Tap"><icon class='icon'></icon>志愿列表</view>                  
+                 <view class="subtitle" bindtap="versionUp2Tap"><icon class='icon'></icon>版本更新</view>
+	  	  	   </view>
+	  	  	   
+  	  	   </view>
+  	  	   <view class="sideMask" bindtap="sideTap"></view>
+  	  </view>

@@ -1,0 +1,26 @@
+  <view class="author-pops ui-pop-layouts">
+       <image class="logo" src="../../images/logo.jpg"></image>
+       <!-- <view ></view> -->
+       <view class="protocol">
+
+          <view class="text">本协议是凌志高考志愿填报服务小程序（以下简称“凌志”）与您就使用该程序获取相关信息等相关事项所订立的有效合约。请您仔细阅读本协议内容。除非您接受本协议所有条款，否则您无权使用凌志小程序所提供的服务，您一经开通或使用凌志高考志愿查询服务，即视为您已理解并接受本协议所有条款。</view>
+          <view class="text">1、您自愿申请使用高考志愿填报服务。凌志服务为：高考省内院校查询与推荐、院校与专业资讯介绍、付费查询省外院校及生成志愿表等。</view>
+          <view class="text">2、您从以下三种路径获取凌志小程序服务：（1）点击发现-小程序-凌志高考志愿填报服务；（2）长按凌志小程序海报扫码；（3）微信个人/群聊点击凌志小程序进入。在进入小程序后，点击“同意”即视为您同意本服务协议。您同意本服务协议后，即可在限定次数内查询高考院校和享受相关服务。</view>
+          <view class="text">3、您同意并授权凌志小程序就相关志愿填报服务收取相应服务费用，包括但不限于：根据一模成绩查看17年高考折算分和排名、查看省外院校、调节志愿参数等。</view>
+          <view class="text">4、您在了解凌志小程序付费服务后并输入支付密码或支付指纹即视为您授权良品教育科技有限公司可依据支付指令从您微信零钱账户或微信支付账户绑定的银行账户中扣划指定款项至商户指定账户。</view>
+          <view class="text">5、您同意并授权良品教育科技有限公司对凌志小程序付费服务的支付指令进行资金扣划，良品教育科技有限公司和凌志小程序对支付的正确性、合法性、真实性不承担任何法律责任，相关法律责任由您自行承担。</view>
+          <view class="text">6、您知晓凌志小程序相关服务的内容（含免费服务和付费服务），在同意并支付成功后，对于凌志小程序服务内容有异议的，不能申请退款。</view>
+          <view class="text">7、凌志小程序的相关数据和高考志愿服务仅供您参考，对于因志愿填报不合理而产生的损失，由您自行承担。</view>
+
+       </view>
+
+       
+       <view class="ui-pop-action">
+          <radio-group class="radio-group ui-pop-checkbox" bindchange="protocolChange">
+            <label>
+              <checkbox value="0" checked />“凌志高考志愿填报服务”小程序使用协议
+            </label>
+          </radio-group>
+          <button class="ui-pop-auth" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">同意授权并登录</button>
+       </view>
+  </view>

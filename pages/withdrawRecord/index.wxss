@@ -1,0 +1,11 @@
+/**index.wxss**/
+
+
+.ui-tab-layout .ui-tab-head .ui-tab-title{ float: none; width: auto; }
+
+.ui-news-layout .list .name[data-state='0']:before{ content: "审核中"; }
+.ui-news-layout .list .name[data-state='1']:before{ content: "已到账"; }
+.ui-news-layout .list .name[data-state='-1']:before{ content: "审核不通过"; }
+
+
+.ui-news-layout .list[data-state='0'] .money,.ui-news-layout .list[data-state='1'] .money{ color: #efa93a; }

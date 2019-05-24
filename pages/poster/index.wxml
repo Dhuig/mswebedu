@@ -1,0 +1,20 @@
+  
+  <include src="header.wxml"/>
+
+  <view class="ui-path-layout" >
+    	
+    	<view class="wxPoster" style="background-image: url({{image}});" bindtap="previewTap" data-url="{{image}}"></view>	
+
+       <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+
+  </view>
+
+
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+ 
+
+ <!-- 底部导航栏 -->
+ <footerlist stylestatus="" />

@@ -1,0 +1,257 @@
+
+
+
+
+page{ font-size: 28rpx; font-family:"Microsoft YaHei"; color: #333; }
+view,text,icon{margin:0;padding:0; line-height:1; }
+.clearfix:before, .clearfix:after {     display: table;     line-height: 0;
+content: ''; } .clearfix:after {     clear: both; }
+.fl{ float: left; }
+.fr{ float: right; }
+.page-interval{ padding-left: 40rpx !important; padding-right: 40rpx !important; }
+.ui-divder{ border-top: 10rpx solid #f2f2f2; }
+.indent{ text-indent: 2em; }
+.pb-20{ padding-bottom: 20rpx; }
+.pb-40{ padding-bottom: 40rpx; }
+.ml-20{ margin-left: 20rpx; }
+.ml-40{ margin-left: 40rpx; }
+.ellipsis{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+/** 容器 **/
+.ui-path-layout{ position: absolute; left: 0; top: 0; bottom: 102rpx; width: 100%; overflow: auto; }
+.ui-path-layout.bottom{ bottom: 0; }
+.ui-path-layout[data-hidden="true"]{ overflow: hidden; }
+.ui-path2-layout{ padding-bottom: 102rpx; }
+.ui-btn-user{ position:absolute; left:40rpx; top: 20rpx; z-index: 8;  width: 48rpx; height: 48rpx; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-6-curr.png) no-repeat; background-size: cover; }
+.ui-btn-back{ position:fixed; right:40rpx; bottom: 116rpx; z-index: 8; width: 72rpx; height: 72rpx; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-11.png) no-repeat; background-size: cover; }
+.ui-btn-backLink{position:absolute; left:40rpx; top: 20rpx; z-index: 8;  width: 48rpx; height: 48rpx; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-16-2.png) no-repeat; background-size:contain;}
+.ui-btn-backLink2{position:fixed; right:40rpx; bottom: 200rpx; z-index: 8;  width: 72rpx; height: 72rpx; border:2rpx solid #ddd; border-radius:50%; background:#fff url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-16.png) no-repeat center center; background-size:auto 70%;-webkit-filter:grayscale(100%);filter:grayscale(100%);filter:gray;}
+
+/** 公共顶部导航条 **/
+.public-topNav-layout{ padding:16rpx 0; background: #fff; }
+.public-topNav-layout .userHead{float: left;width:58rpx; height: 58rpx; margin:0 40rpx; vertical-align: middle; background:no-repeat #aaa; background-size:cover; opacity: 0; }
+.public-topNav-layout .grade{ float: left;width: 200rpx;padding-top: 8rpx; }
+.public-topNav-layout .text{ display: inline-block; position: relative; vertical-align: middle;  }
+.public-topNav-layout .text text{ display: block; }
+.public-topNav-layout .text:after{ content: ""; height:50rpx; margin:0 10rpx; border-left: 2rpx solid #ddd; vertical-align: middle;}
+.public-topNav-layout .count{ display: inline-block; vertical-align: middle; font-family:"Arial"; color: #f00; font-weight: 600; }
+.public-topNav-layout .lh{ padding-top: 6rpx; }
+
+
+/* 公共底部-菜单布局 */
+.public-footer-layout{ position:fixed; left:0; bottom:0; width:100%; border-top:2rpx solid #ddd; background:#fff;}
+.public-footer-layout .menu{ float:left; width:25%; padding:16rpx 0; box-sizing:border-box; text-align:center; font-size:22rpx; }
+.public-footer-layout .menu text{color:#999;}
+.public-footer-layout .menu:nth-child(1){ border-left:none;}
+.public-footer-layout .menu i{ display:block; width:60rpx; height:32rpx; margin:0 auto 14rpx auto;vertical-align:middle; background: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav1-curr.png?v=1) no-repeat center center; background-size:contain; -webkit-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.public-footer-layout .menu:nth-child(1) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav1-curr.png?v=1);}
+.public-footer-layout .menu:nth-child(2) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav2-curr.png?v=1);}
+.public-footer-layout .menu:nth-child(3) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav3-curr.png);}
+.public-footer-layout .menu:nth-child(4) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav4-curr.png);}
+.public-footer-layout .menu[data-current='true'] text{ color: #19ad19; }
+.public-footer-layout .menu[data-current='true'] i{-webkit-filter: none;filter:none;filter:none;}
+
+
+/** 表单布局 **/
+.ui-form-layout .ui-form-control{ margin-bottom: 30rpx; }
+.ui-form-layout .ui-form-label{ margin-bottom: 14rpx; }
+.ui-form-layout .ui-form-input{ width:100%; height:86rpx; padding-left: 20rpx; border:2rpx solid #ddd; box-sizing:border-box; line-height: 86rpx; font-size: 32rpx;  border-radius: 8rpx;  }
+.ui-form-layout .ui-form-tip{ padding-top:12rpx; font-size: 24rpx; color: #999; }
+
+/** 表格布局 **/
+.ui-table-layout .td{ position: relative; float: left; min-height: 36rpx; padding: 20rpx 0; text-align: center;  }
+.ui-table-layout .td:nth-child(1){ width:60rpx; }
+.ui-table-layout .td:nth-child(2){ width:100rpx; }
+.ui-table-layout .td:nth-child(3){ width:200rpx; }
+.ui-table-layout .td:nth-child(4){ width:310rpx; }
+.ui-table-layout .ui-table-tr{ position: relative; }
+.ui-table-layout .ui-table-tbody .td{border-bottom: 2rpx solid #ddd;}
+.ui-table-layout .ui-table-tbody .td[data-type]{ border-bottom-color: transparent; }
+.ui-table-layout .ui-table-tbody .td[data-type]:before{ content: "冲"; display: inline-block; width:36rpx; height: 36rpx; line-height: 36rpx; text-align: center; font-size: 28rpx; border-radius: 50%; color: #fff; background: #f00; }
+.ui-table-layout .ui-table-tbody .td[data-type='1']:before{ content: "保" ; background: #19ad19;}
+.ui-table-layout .ui-table-tbody .td[data-type='2']:before{ content: "稳";background:#f60 ;   }
+.ui-table-layout .ui-table-tbody .td[data-type='3']:before{ content: "****";  background: #fff; color:#000;}
+
+
+.ui-table-layout .ui-table-thead .td{ color: #999; }
+.ui-table-layout[data-layout='2'] .td{ width:16.666%; font-size: 26rpx;  }
+.ui-table-layout[data-layout='2'] .ui-table-tbody .td:nth-child(1):before{ display: none; }
+.ui-table-layout[data-layout='2'] .ui-table-tbody .td:nth-child(1){ border-bottom-color:#ddd; }
+.ui-table-layout .td .icon-tag{ display: inline-block; margin: 0 6rpx 6rpx 0; padding: 4rpx; vertical-align: middle; font-size: 24rpx; border-radius: 8rpx; color: #fff; background: #f60; }
+.ui-table-layout .td .icon-tag:nth-child(2){ background: #19ad19; }
+.ui-table-layout .td .icon-tag:nth-child(3){ background: #f00; }
+
+/** 按钮布局 **/
+.ui-btn-block{ display: block; height: 86rpx; line-height: 86rpx; text-align: center; font-size: 32rpx; color: #fff; border-radius: 8rpx; background: #19ad19; }
+.ui-btn-group .ui-btn-block{ float: left; width: 48%; }
+.ui-btn-group .ui-btn-block:nth-child(2){ float: right; }
+
+/** 滚动条布局 **/
+.ui-iscroll-layout{ position: absolute; left: 0; top: 0; bottom: 0; width: 100%; }
+.ui-iscroll-layout .ui-iscroll-box{position: absolute; left: 0; top: 0; bottom: 0; right: 0;  }
+.ui-iscroll-layout .ui-iscroll-left{ width: 200rpx; }
+.ui-iscroll-layout .ui-iscroll-right{ left: 220rpx;  }
+
+
+/** 普通文本布局 **/
+.ui-intro-layout .ui-intro-text{ line-height: 1.6; color: #666; }
+.wxInfo{ text-align: center; color: #666; }
+.wxInfo .wxCode{ width: 220rpx; height: 220rpx; margin-bottom: 10rpx; border:2rpx solid #ddd; border-radius: 8rpx; background: #aaa no-repeat; background-size: cover; }
+
+/** 普通列表布局 **/
+.ui-list-layout .list{ position: relative; margin:10rpx 0; padding: 20rpx 0; background: #fff; }
+.ui-list-layout .list .text{ float: left; line-height: 46rpx; font-size: 32rpx; }
+.ui-news-layout .list{ position: relative; padding: 30rpx 0; border-bottom: 2rpx solid #ddd; }
+.ui-news-layout .list .name{ font-size: 30rpx; }
+.ui-news-layout .list .desc{ padding-top: 16rpx; font-size: 26rpx; color: #999; }
+.ui-news-layout .list .ui-news-tag{ display: inline-block; padding:4rpx 8rpx; font-size: 24rpx; color: #fff; border-radius: 20rpx; background: #eb452f; }
+.ui-news-layout .list .money{ position: absolute; right: 40rpx; top: 50%; margin-top: -20rpx; text-align: center; font-size: 40rpx; color: #969696; }
+.ui-news-layout .list .money[data-state='1']{ color: #efa93a; }
+.ui-news-layout[data-layout='2'] .list:before{ content: ""; position: absolute; right: 40rpx; top: 50%;  width: 40rpx; height: 40rpx; margin-top: -20rpx; background:no-repeat right center; background-size:contain;}
+.ui-news-layout[data-layout='3'] .ui-news-tag{ margin-bottom: 6rpx; }
+.ui-news-layout[data-layout='3'] .list .money:before{ content: "获得佣金"; display: block; margin-bottom: 6rpx; font-size: 24rpx; color: #999;  }
+
+/** 选项卡 **/
+.ui-tab-layout .ui-tab-head .ui-tab-title{ float: left; position: relative; width:50%; padding: 30rpx 0 20rpx 0; text-align: center; font-size: 32rpx; }
+.ui-tab-layout .ui-tab-head .ui-tab-title:before{  position: absolute; left: 35%; bottom: 0; width: 30%; border-bottom: 4rpx solid #19ad19;  }
+.ui-tab-layout .ui-tab-head[data-type='1'] .ui-tab-title:nth-child(1):before{ content: ""; }
+.ui-tab-layout .ui-tab-head[data-type='2'] .ui-tab-title:nth-child(2):before{ content: ""; }
+
+
+.ui-tab-layout-new .ui-tab-head .ui-tab-title{ float: left; position: relative; width:25%; padding: 30rpx 0 20rpx 0; text-align: center; font-size: 32rpx; }
+.ui-tab-layout-new .ui-tab-head .ui-tab-title:before{  position: absolute; left: 35%; bottom: 0; width: 30%; border-bottom: 4rpx solid #19ad19;  }
+.ui-tab-layout-new .ui-tab-head[data-type='1'] .ui-tab-title:nth-child(1):before{ content: ""; }
+.ui-tab-layout-new .ui-tab-head[data-type='2'] .ui-tab-title:nth-child(2):before{ content: ""; }
+.ui-tab-layout-new .ui-tab-head[data-type='3'] .ui-tab-title:nth-child(3):before{ content: ""; }
+.ui-tab-layout-new .ui-tab-head[data-type='4'] .ui-tab-title:nth-child(4):before{ content: ""; }
+
+/** 弹窗 **/
+.ui-pop-layout{ display: none; position:fixed; left: 0; top: 0; width: 100%; bottom: 0; z-index: 88; }
+.ui-pop-layout[data-show="true"]{ display: block; }
+.ui-pop-layout .ui-pop-center{ position: absolute; left: 50%; top: 50%; z-index: 3; width: 80%; transform: translate3d(-50%,-50%,0); -webkit-transform: translate3d(-50%,-50%,0); border-radius: 8rpx;  background: #fff; } 
+.ui-pop-layout .ui-pop-title{ line-height: 110rpx; text-align: center; font-size: 32rpx; color: #fff; background: #19ad19; }
+.ui-pop-layout .ui-pop-text{ padding:40rpx 0; line-height: 1.6; font-size: 32rpx; }
+.ui-pop-layout .ui-pop-footer{ border-top: 2rpx solid #eee; }
+.ui-pop-layout .ui-pop-btn{ display: block; box-sizing:border-box; line-height: 100rpx; text-align: center; font-size: 32rpx; background:none; }
+.ui-pop-layout .ui-pop-footer .ui-pop-btn{ float: left; width:50%; border-right: 2rpx solid #eee; color: #000; }
+.ui-pop-layout .ui-pop-footer .ui-pop-btn:last-child{ border-right:none; color: #19ad19;  }
+.ui-pop-layout .ui-pop-mask{position: absolute; left: 0; top: 0; width: 100%; bottom: 0;  background: rgba(0,0,0,0.5);}
+.ui-pop-layout .ui-pop-content{ padding:40rpx 0;  }
+.ui-pop-layout .other-btn{ display: none; }
+.ui-pop-layout .ui-btn-group[data-status="0"] .ui-btn-block{ display: none; }
+.ui-pop-layout .ui-btn-group[data-status="0"] .other-btn{ display: block; float: none; width: 100%; }
+.ui-pop-layout .ui-pop-btngroup{ padding:10rpx 40rpx; border-top: 2rpx solid #ddd; }
+.ui-pop-layout .ui-pop-btngroup .btn{ display: block; height: 72rpx; line-height: 72rpx; text-align:center; font-size: 40rpx; color: #fff; background: #19ad19;}
+.protocol-pop .ui-pop-title{ color: #333; background: none; }
+.protocol-pop .ui-pop-content{ padding-top: 0; }
+.protocol-pop .ui-desc-text{ margin: 0 40rpx; line-height: 1.4; color: #666; }
+
+/* * 侧栏 * */
+.public-side-fixed{ display: none;  position:fixed; left: 0; top: 0; width: 100%; bottom: 0; z-index: 99; } 
+.public-side-fixed[data-show="true"]{ display: block; }
+.public-side-fixed .sideBox{ position: absolute; left: 0; top: 0; bottom: 0; z-index:3; width: 80%; background: #fff; }
+.public-side-fixed .sideMask{ position: absolute; left: 0; top: 0; width: 100%; bottom: 0; background: rgba(0,0,0,0.5); }
+.public-side-fixed .userItem{ padding: 60rpx 0; background: #f2f2f2; }
+.public-side-fixed .userIntro .userHead{ float: left; position: relative; width: 80rpx; height: 80rpx; border-radius: 50%; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-header.png) no-repeat; background-size: cover;}
+.public-side-fixed .userIntro .userName{ margin-left: 100rpx; line-height: 80rpx; font-size: 32rpx; }
+.public-side-fixed .userIntro .userHead[data-state='1']:after{ content: "VIP"; position: absolute; right: -12rpx; top: -12rpx; width:36rpx; height: 36rpx; border:2rpx solid #fff; text-align: center; line-height: 36rpx; font-size: 20rpx;   border-radius: 50%; color: #fff; background: #19ad19; }
+.public-side-fixed .brokerage{ padding: 40rpx 0; }
+.public-side-fixed .brokerage .icon-brokerage{display: inline-block; width: 30rpx; height: 30rpx; margin-right: 10rpx; vertical-align: middle;background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-5.png) no-repeat; background-size: cover;}
+.public-side-fixed .brokerage .price{ font-family:"Arial"; font-size: 40rpx; font-weight: 600; color: #19ad19;  }
+.public-side-fixed .ui-btn-group .ui-btn-block{ height: 64rpx; line-height: 64rpx; }
+.public-side-fixed .ui-btn-group .ui-btn-block:nth-child(2){ display: none; float:left;} 
+.public-side-fixed .ui-btn-group .ui-btn-block:nth-child(1){ display: none; } 
+/* 2018/9/7 关闭提现按钮 功能 2018/9/7 加的左浮动 功能（为了配合关闭提现按钮） */
+.public-side-fixed .ui-btn-group .ui-btn-block[data-state='0']{ display:block; }
+.public-side-fixed .ui-menu-list{ padding-top:20rpx; }
+.public-side-fixed .ui-menu-list .subtitle{ margin: 40rpx 0; }
+.public-side-fixed .ui-menu-list .subtitle icon{ display: inline-block; width: 50rpx; height: 40rpx; margin-right: 10rpx; vertical-align: middle;background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle1.png) no-repeat; background-size:contain; }
+.public-side-fixed .ui-menu-list .subtitle:nth-child(2) icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle2.png); }
+.public-side-fixed .ui-menu-list .subtitle:nth-child(3) icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle3.png); }
+.public-side-fixed .ui-menu-list .subtitle:nth-child(4) icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle4.png); }
+.public-side-fixed .ui-menu-list .subtitle:nth-child(5) icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle5.png); }
+.public-side-fixed .ui-menu-list .subtitle:nth-child(6) icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle6.png); }
+
+/** 多选框 **/
+.ui-checkbox{ position: relative; display: inline-block; width: 100rpx; height: 46rpx; border-radius: 46rpx; background: #e5e5e5; transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out;  }
+.ui-checkbox:before{ content: ""; position: absolute; left: 4rpx; top: 4rpx; width: 38rpx; height: 38rpx; border-radius: 50%; background: #fff; transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out;  }
+.ui-checkbox[data-checked="1"]{background: #19ad19;}
+.ui-checkbox[data-checked="1"]:before{ left:58rpx;  }
+
+/** 数量框 **/
+.ui-quantity-layout .ui-quantity-btn{ float: left; width: 46rpx; height: 46rpx; border-radius: 50%; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-13.png) no-repeat; background-size: cover;}
+.ui-quantity-layout .ui-quantity-btn:last-child{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-14.png); }
+.ui-quantity-layout .ui-quantity-btn:nth-child(1)[data-num='0'],.ui-quantity-layout .ui-quantity-btn:last-child[data-sum='0']{-webkit-filter: grayscale(100%); filter: grayscale(100%);filter: gray;}
+.ui-quantity-layout .ui-quantity-text{ float: left; width: 92rpx; line-height: 46rpx; text-align: center; font-size: 32rpx; color: #19ad19; font-weight: 600; }
+
+/** 底部按钮 **/
+.ui-footer-fixed{ position:fixed; left: 0; bottom: 0; width: 100%; box-sizing:border-box; }
+.ui-footer-fixed.bottom{ bottom: 110rpx; }
+.ui-footer-fixed[data-state='1']{ display: none; }
+
+/** 收藏列表 **/
+.ui-collect-layout .item{position: relative;}
+.ui-collect-layout .subtitle{ position: relative; padding:30rpx 40rpx 30rpx 0; border-bottom: 2rpx solid #ddd; }
+.ui-collect-layout .course{ position: relative; padding: 0 40rpx; height: 60rpx; line-height: 60rpx; font-size: 24rpx; color: #666;  }
+.ui-collect-layout .course.clr{ color:#19ad19; }
+.ui-collect-layout .item .list{ overflow:hidden; height: 0; }
+.ui-collect-layout .item[data-state='true'] .list{ height: auto; }
+.ui-collect-layout .item[data-state='true'] .course{border-bottom: 2rpx solid #eee; }
+.ui-collect-layout .item .course[data-current='2']{ color: #999; }
+.ui-collect-layout .icon-collect{ right: 0; }
+
+.icon-convert[data-type]:before{ content: "冲"; display: inline-block; width:36rpx; height: 36rpx; line-height: 36rpx; text-align: center; font-size: 28rpx; border-radius: 50%; color: #fff; background: #f00; }
+.icon-convert[data-type='3']:before{ content: "保" ; background: #19ad19;}
+.icon-convert[data-type='2']:before{ content: "稳";background:#f60 ;   }
+
+.icon-collect{ position: absolute; right: -20rpx; top: 50%; width: 40rpx; height: 40rpx; margin-top: -20rpx; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/heart-o.png) no-repeat; background-size: cover; }
+.icon-collect[data-current="1"]{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/heart.png); }
+.icon-collect[data-current='2']{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/heart-c.png);  }
+
+
+
+/** 分页 **/
+[data-page]:after{ content: "上拉加载更多数据"; display: block; padding: 30rpx 0; text-align:center; color: #999; }
+[data-page="end"]:after{ content: "暂无数据"; }
+
+
+/** 授权弹窗 **/
+.author-pop{ background-color: #fff; }
+.author-pop .logo{ display: block; width: 200rpx; height: 200rpx; margin:30rpx auto; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/logo.jpg) no-repeat; background-size: cover;  }
+.author-pop .protocol{ margin: 0 20rpx; padding: 20rpx; height: 500rpx; overflow: auto; border:2rpx solid #eee; }
+.author-pop .protocol .subtitle{ font-weight: 600; }
+.author-pop .protocol .text{ line-height: 2; color: #666; }
+.author-pop .ui-pop-action{ margin: 0 40rpx; }
+.author-pop .ui-pop-checkbox{ margin-top: 20rpx; }
+.author-pop .ui-pop-auth{ margin-top: 30rpx; background:#19ad19; border:none; color: #fff;  }
+.author-pop .ui-pop-auth:after{ display: none; }
+.author-pop .subtitle{ line-height: 1.2; color: #000; }
+.author-pop .author-list{ padding-top: 20rpx; }
+.author-pop .author-list .list{ position: relative; margin-bottom: 8rpx; line-height: 1.2; font-size: 24rpx; color: #999; }
+.author-pop .author-list .list:before{ content: ""; display:inline-block; width: 8rpx; height: 8rpx; margin-right: 6rpx; border-radius: 50%; vertical-align: middle; background:#eee;  }
+
+/** 志愿详情 **/
+.view-table-layout{ margin: 0 12rpx; border:2rpx solid #eee; line-height: 1.2; border-radius: 6rpx; }
+.view-table-layout .thead{padding: 20rpx 0;border-bottom: 2rpx solid #eee; text-align:center;}
+.view-table-layout .thead:nth-child(1) .th{ color: #666; }
+.view-table-layout .thead .th{ float: left; width: 150rpx;  }
+.view-table-layout .thead .th:nth-child(1){ width: 120rpx;}
+.view-table-layout .thead .th:nth-child(2){ width: 300rpx; text-align: left; }
+.view-table-layout .tfooter{ position: relative; min-height:70rpx; border-bottom: 2rpx solid #eee; }
+.view-table-layout .tfooter:last-child{ border-bottom: none; color: #999; }
+.view-table-layout .tfooter .subtitle{ position: absolute; left: 0; top:0; bottom: 0; width: 180rpx;  border-right: 2rpx solid #eee;  text-align:center; }
+.view-table-layout .tfooter .subtitle text{ position: absolute; width: 100%; left: 0; top: 50%; margin-top: -14rpx; }
+.view-table-layout .tfooter .td{ margin-left: 180rpx; padding: 20rpx 0;  border-bottom: 2rpx solid #eee; text-indent: 20rpx; }
+.view-table-layout .tfooter .td:last-child{ border-bottom: none; }
+.view-table-layout .tfooter:last-child td{color: #999;}
+.view-table-layout .icon-tag{ display: inline-block; margin: 0 6rpx 6rpx 0; padding: 4rpx; vertical-align: middle; font-size: 24rpx; border-radius: 8rpx; color: #fff; background: #f60; }
+.view-table-layout .icon-tag:nth-child(2){ background: #19ad19; }
+.view-table-layout .icon-tag:nth-child(3){ background: #f00; }
+.ui-hr-line{ display: block; margin: 30rpx 12rpx; border-bottom: 10rpx solid #ddd; }
+
+
+
+
+/** 去掉拼团按钮 2018-06-13 **/
+.ui-btn-group[data-state="0"][data-status="999"] .ui-btn-block:nth-child(1){ display: none; }
+.ui-btn-group[data-state="0"][data-status="999"] .ui-btn-block:nth-child(2){ display:block; float: none; width: auto; }

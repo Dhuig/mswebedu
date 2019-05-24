@@ -1,0 +1,151 @@
+
+  <!-- 授权-弹窗 -->
+  <authorization binduserinfo="authorization" style="{{authPop==='true'?'display:block;':'display:none;'}}" />
+  <!-- 授权-弹窗 end-->
+
+  <!--内容-->
+  <view class="ui-path-layout-index" data-hidden="{{sideShow}}" >
+  	
+  	  <view class="userInfo">
+  	  	   <view class="userHead" style="background-image:url({{avatarUrl}});"></view>
+  	  	   <view class="userName">{{avatarName}}</view>
+          <!-- 轮播图 -->
+          <view class="ui-swiper">
+            <swiper
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}"
+            circular="true"
+          >
+            <block wx:for="{{imgUrls}}" wx:key >
+              <swiper-item>
+                <image data-link="{{item}}" src="{{'http://gaokao.mingshiedu.com/'+item.image_addre}}" style='height:300rpx;' mode="aspectFit" bindtap='tapJump' />
+              </swiper-item>
+            </block>
+          </swiper>
+          </view>
+  	  </view>
+
+  	  <view class="ui-form-layout">
+  	  	   <view class='ui-form-control'>
+	  	  	   <view class="ui-form-label">{{member.score_msg}}</view>
+	  	  	   <input class="ui-form-input" type="digit" bindinput="scoreInput"  maxlength='20'/>
+  	  	   </view>
+  	  	   <view class='ui-form-control'>
+  	  	   		<radio-group class="radio-group" bindchange="radioChange">
+      				  <label class="radio">
+      				    <radio value="2"/>文科
+      				  </label>
+      				  <label class="radio">
+      				    <radio value="1"/>理科
+      				  </label>
+      				</radio-group>
+  	  	   </view>
+  	  	   <view class='ui-form-control'>
+  	  	   		<view class='ui-btn-block' bindtap="queryTap">查 询</view>
+  	  	   </view>
+  	  </view>
+
+
+  	  <!-- 授权手机号信息-->
+        	  <view class="ui-pop-Phone" data-show="{{getphone}}">
+              <view class="ui-pop-Phones" ></view>
+        	    <view class="ui-pop-center">
+        	                <view class="ui-pop-title">是否确定查询？</view>
+        	                <view class="ui-pop-footer clearfix">
+                            <view class="ui-pop-btn" bindtap="pncancel">取消</view>
+                            <button class='ui-pop-btn' open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="getPhoneNumber">查 询</button>
+                          </view>
+              </view>
+        	  </view>
+
+  	  <!-- 提示弹窗 -->
+      <view class="ui-pop-layout" data-show="{{tipPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">成为VIP</view>
+              <view class="ui-pop-content">
+                 <view class="ui-btn-group page-interval clearfix" data-state="{{vipState}}" data-status="{{groups_status}}">
+                     <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+                     <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+                     <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+                 </view>
+              </view>
+              <!--
+              <view class="ui-pop-footer clearfix">
+                <view class="ui-pop-btn">取消</view>
+                <view class="ui-pop-btn">确认</view>
+              </view>
+            -->
+           </view>
+           <view class="ui-pop-mask" bindtap="tipPopTap"></view>
+      </view>
+      <!-- 提示弹窗 end-->
+
+  	  <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap" ></view>
+      <!-- <avatar class='ui-btn-user' bindtap="sideTap" /> -->
+      <!-- <view class="public-side-fixed" data-show="{{sideShow}}">
+  	  	   <view class="sideBox">
+
+  	  	   	   <view class="userItem page-interval">
+		  	  	   <view class="userIntro clearfix">
+		  	  	   	   <view class="userHead" style="background-image:url({{avatarUrl}});" data-state="{{vipState}}"></view>
+		  	  	   	   <view class="userName ellipsis">{{avatarName}}<text ></text></view>
+		  	  	   </view>
+		  	  	   <view class="brokerage">
+                <icon class="icon-brokerage"></icon>
+                推荐奖金 <text class="price">{{member.commission}}</text>
+               </view>
+		  	  	   <view class="ui-btn-group clearfix">
+		  	  	   	   <view class="ui-btn-block" bindtap="withdrawLink1Tap">提现</view>
+		  	  	   	   <view class="ui-btn-block" bindtap="tipPopTap" data-state="{{vipState}}" data-status="{{member.groups}}">成为VIP</view>
+		  	  	   </view>
+	  	  	   </view>
+
+	  	  	   <view class="ui-menu-list page-interval">
+	  	  	   	   <view class="subtitle" bindtap="recommendLinkTap"><icon></icon>推荐记录</view>
+	  	  	   	   <view class="subtitle" bindtap="expenditureLinkTap"><icon></icon>消费记录</view>
+	  	  	   	   <view class="subtitle" bindtap="withdrawLink2Tap"><icon></icon>提现记录</view>
+                  2018/9/7 关闭该功能
+	  	  	   	   <view class="subtitle" bindtap="aboutLinkTap"><icon></icon>联系我们</view>
+                 <view class="subtitle" bindtap="posterLinkTap"><icon></icon>我的海报</view>
+                 <view class="subtitle" bindtap="volunteerLink2Tap"><icon></icon>志愿列表</view>                  
+                 <view class="subtitle" bindtap="versionUp2Tap"><icon></icon>版本更新</view>
+	  	  	   </view>
+	  	  	   
+  	  	   </view>
+  	  	   <view class="sideMask" bindtap="sideTap"></view>
+  	  </view> -->
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+  	  <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+      <!-- 提示弹窗 -->
+      <!--
+      <view class="protocol-pop ui-pop-layout" data-show="{{protocolPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">用户协议</view>
+              <view class="ui-pop-content">
+                  <view class="ui-desc-text">1，用户协议</view>
+                  <view class="ui-desc-text">1，用户协议</view>
+              </view>
+              <view class="ui-pop-btngroup clearfix">
+                <view class="btn">同意</view>
+              </view>
+           </view>
+           <view class="ui-pop-mask" bindtap="protocolPopTap"></view>
+      </view>
+      -->
+      <!-- 提示弹窗 end-->
+	   
+  </view>   
+  <!--内容 end-->
+  
+   <!-- 底部导航栏 -->
+ <footerlist stylestatus="" />
+ 
+ 

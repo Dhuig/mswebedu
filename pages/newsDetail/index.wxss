@@ -1,0 +1,14 @@
+/**index.wxss**/
+
+
+
+
+.ui-path-layout{ padding-bottom: 200rpx; }
+
+.newsInfo .newsName{ padding:80rpx 0 30rpx 0; font-size: 40rpx; color: #111;font-weight: 600; }
+.newsInfo .newsSource{ color: #999; }
+.newsInfo .newsDetail{ padding: 80rpx 0 40rpx 0; line-height: 1.6; color: #666; text-indent:2em; font-size: 30rpx; }
+
+.ui-intro-layout{ padding: 40rpx 0; }
+
+.ui-intro-layout image{ width: 100% !important; }

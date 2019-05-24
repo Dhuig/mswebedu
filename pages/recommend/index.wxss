@@ -1,0 +1,4 @@
+/**index.wxss**/
+
+
+.ui-tab-layout .ui-tab-head .ui-tab-title{ float: none; width: auto; } 

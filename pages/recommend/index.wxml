@@ -1,0 +1,46 @@
+
+
+  <!--内容-->
+  <view class="ui-path2-layout" data-hidden="{{sideShow}}" >
+  	   
+       <view class="ui-tab-layout">
+           <view class="ui-tab-head clearfix" >
+               <view class="ui-tab-title">推荐记录</view>
+           </view>
+           <view class="ui-divder"></view>
+       </view>
+
+       <view class="ui-news-layout page-interval" data-layout='3' data-page="{{pageState}}">
+
+           <view class="list" wx:for="{{dataArr}}">
+               <view><text class="ui-news-tag">推荐人</text></view>
+               <view class="name">{{item.name}}</view>
+               <view class="desc">{{item.time}}</view>
+               <view class="money" data-state='1'>+{{item.pay_money}}</view>
+           </view>
+        
+       </view> 
+
+       <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap"></view>
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+      <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+       <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view> 
+
+  </view>   
+  <!--内容 end-->
+
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+
+   <!-- 底部导航栏 -->
+ <footerlist stylestatus="" />
+ 
+ 

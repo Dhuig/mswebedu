@@ -1,0 +1,43 @@
+/** 侧栏 **/
+.public-side-fixeds{ position:fixed; left: 0; top: 0; width: 100%; bottom: 0; z-index: 99; } 
+.public-side-fixeds .sideBox{ position: absolute; left: 0; top: 0; bottom: 0; z-index:3; width: 80%; background: #fff; }
+.public-side-fixeds .sideMask{ position: absolute; left: 0; top: 0; width: 100%; bottom: 0; background: rgba(0,0,0,0.5); }
+.public-side-fixeds .userItem{ padding: 60rpx 0; background: #f2f2f2; }
+.public-side-fixeds .userIntro .userHead{ float: left; position: relative; width: 80rpx; height: 80rpx; border-radius: 50%; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-header.png) no-repeat; background-size: cover;}
+
+.public-side-fixeds .userIntro .userName{ margin-left: 100rpx; line-height: 80rpx; font-size: 32rpx; }
+.vip {z-index:99;position: absolute; left: 94rpx; top: 50rpx; width:36rpx; height: 36rpx; border:2rpx solid #fff; text-align: center; line-height: 36rpx; font-size: 20rpx; border-radius: 50%; color: #fff; background: #19ad19;}
+.public-side-fixeds .brokerage{ padding: 40rpx 0; } 
+
+.public-side-fixeds .brokerage .icon-brokerage{display: inline-block; width: 30rpx; height: 30rpx; margin-right: 10rpx; vertical-align: middle;background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-5.png) no-repeat; background-size: cover;}
+.public-side-fixeds .brokerage .price{ font-family:"Arial"; font-size: 40rpx; font-weight: 600; color: #19ad19;  }
+.public-side-fixeds .ui-btn-group .ui-btn-block{ height: 64rpx; line-height: 64rpx; }
+.public-side-fixed .ui-btn-group .ui-btn-block:nth-child(2){ display: none; float:left;} 
+.public-side-fixed .ui-btn-group .ui-btn-block:nth-child(1){ display: none; } 
+
+.public-side-fixeds .ui-menu-list{ padding-top:20rpx; }
+.public-side-fixeds .ui-menu-list .subtitle{ margin: 40rpx 0; }
+.public-side-fixeds .ui-menu-list .subtitle .icon{ display: inline-block; width: 50rpx; height: 40rpx; margin-right: 10rpx; vertical-align: middle;background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle1.png) no-repeat; background-size:contain; }
+.public-side-fixeds .ui-menu-list .subtitle:nth-child(2) .icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle2.png); }
+.public-side-fixeds .ui-menu-list .subtitle:nth-child(3) .icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle3.png); }
+.public-side-fixeds .ui-menu-list .subtitle:nth-child(4) .icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle4.png); }
+.public-side-fixeds .ui-menu-list .subtitle:nth-child(5) .icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle5.png); }
+.public-side-fixeds .ui-menu-list .subtitle:nth-child(6) .icon{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-subtitle6.png); }
+
+.page-intervals{ padding-left: 40rpx !important; padding-right: 40rpx !important; }
+.ellipsiss{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.clearfixs:before, .clearfixs:after {     
+  display: table;     
+  line-height: 0;
+  content: ''; 
+} 
+.clearfixs:after {     
+  clear: both; 
+}
+
+
+.ui-btn-user{ position:absolute; left:40rpx; top: 20rpx; z-index: 8;  width: 48rpx; height: 48rpx; background:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-6-curr.png?v=2) no-repeat; background-size: cover; }
+
+.ui-btn-block{ display: block; height: 86rpx; line-height: 86rpx; text-align: center; font-size: 32rpx; color: #fff; border-radius: 8rpx; background: #19ad19; }
+.ui-btn-group .ui-btn-block{ float: left; width: 48%; }
+.ui-btn-group .ui-btn-block:nth-child(2){ float: right; }

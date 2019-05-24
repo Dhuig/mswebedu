@@ -1,0 +1,76 @@
+
+
+  <!--内容-->
+  <view class="ui-path-layout" data-hidden="{{sideShow}}" >
+  	   
+       <view class="recommendMoney">
+            <icon class="icon-money"></icon>
+            <view class="text">推荐奖金 <text class="price">￥{{member.commission}}</text></view>
+       </view>
+      
+       <view class="ui-form-layout page-interval">
+           <view class='ui-form-control ui-form-price'>
+             <view class="ui-form-label">提现金额</view>
+             <input class="ui-form-input" bindinput="moneyInput" type="digit" />
+             <text class="unit">￥</text>
+             <view class="ui-form-tip">到账微信零钱，请注意查收！</view>
+           </view>
+           <view class='ui-form-control'>
+             <view class="ui-form-label">姓名</view>
+             <input class="ui-form-input" bindinput="nameInput" type="text"/>
+           </view>
+           <view class='ui-form-control'>
+             <view class="ui-form-label">手机号码</view>
+             <input class="ui-form-input" bindinput="mobileInput" type="digit"/>
+           </view>
+           <view class='ui-form-control'>
+              <view class='ui-btn-block' bindtap="withdrawTap">提 现</view>
+           </view>
+      </view> 
+
+      <!-- 提示弹窗 -->
+      <view class="ui-pop-layout" data-show="{{tipPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">成为VIP</view>
+              <view class="ui-pop-content">
+                 <view class="ui-btn-group page-interval clearfix" data-state="{{vipState}}" data-status="{{groups_status}}">
+                     <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+                     <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+                     <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+                 </view>
+              </view>
+              <!--
+              <view class="ui-pop-footer clearfix">
+                <view class="ui-pop-btn">取消</view>
+                <view class="ui-pop-btn">确认</view>
+              </view>
+            -->
+           </view>
+           <view class="ui-pop-mask" bindtap="tipPopTap"></view>
+      </view>
+      <!-- 提示弹窗 end-->
+
+      <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap"></view>
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+      <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+      <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+      
+  </view>   
+  <!--内容 end-->
+
+  
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+ 
+ <!-- 底部导航栏 -->
+ <footerlist stylestatus="" />
+ 
+ 

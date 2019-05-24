@@ -1,0 +1,25 @@
+/**index.wxss**/
+
+
+.ui-path2-layout{ padding-bottom: 200rpx; }
+
+.school-item .schoolInfo{ position: relative; margin:40rpx 0; padding-right: 80rpx !important; font-size: 40rpx;  }
+.school-item .schoolInfo icon{ display: inline-block; width: 88rpx; height: 88rpx; margin-right: 20rpx; vertical-align:middle;  background: #aaa url() no-repeat; background-size: cover; }
+.school-item .schoolInfo .icon-label{ display: inline-block; position: relative; top: -2rpx; margin-right: 10rpx; padding: 8rpx; vertical-align: middle; font-size: 24rpx; border-radius: 8rpx; color: #fff; box-shadow: 4rpx 4rpx 4rpx rgba(0,0,0,0.2);  background: #f60; }
+.school-item .schoolInfo .icon-label:nth-child(2){ background: #19ad19; }
+.school-item .schoolInfo .icon-label:nth-child(3){ background: #f00; }
+.school-item .schoolInfo .icon-collect{ position:absolute; right: 40rpx; top: 50%; width: 40rpx; height: 40rpx; margin-top: -20rpx; }
+.icon-school-logo{ display: inline-block; width: 80rpx; height: 80rpx; margin-right: 10rpx; vertical-align:middle; border-radius: 50%; background: url() no-repeat; background-size: cover; }
+.icon-school-logo[data-length='0']{ display: none; }
+
+.school-item .schoolSubtitle{ position: relative; margin:40rpx; }
+.school-item .schoolSubtitle text{ display: inline-block; position: relative; z-index: 3; padding-right: 6rpx; color: #19ad19; background: #fff; }
+.school-item .schoolSubtitle:before{ content: ""; position:absolute; left: 0; bottom: 0; width: 100%; border-bottom: 2rpx solid #19ad19; }
+.footer{ padding:40rpx 0; }
+
+.matriculate-table .ui-table-tr .td{ width: 25%; }
+.specialty-table .ui-table-tr .td:nth-child(1){ width:33.332%; text-align: left; }
+
+.icon-collect{ right: 38rpx; }
+
+

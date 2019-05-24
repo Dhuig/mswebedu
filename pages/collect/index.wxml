@@ -1,0 +1,99 @@
+
+
+  <!--内容-->
+  <view scroll-y class='ui-path2-layout' data-hidden="{{sideShow}}">
+
+  	   <!--顶部导航条-公共布局-->   
+       <view class="public-topNav-layout clearfix">
+           <text class="userHead"></text>
+           <view class="grade">
+             <text class="text lh">分数</text>
+             <text class="count lh">{{member.before_score}}</text>
+         </view>
+         <view class="grade">
+             <text class="text lh">折算分</text>
+             <text class="count lh">{{member.group!=0 ? member.before_g_score : '***'}}</text>
+           </view>
+           <view class="grade">
+             <text class="text lh">排名</text>
+             <text class="count lh">{{member.group!=0 ? member.before_g_ranking : '***'}}</text>
+           </view>
+       </view>
+       <!--顶部导航条-公共布局 end-->
+
+  	   <!--学校-->
+  	   <view class="school-item">
+  	   		<view class="title page-interval">您的收藏院校</view>
+  	   		<view class="ui-collect-layout page-interval" data-page="{{pageState}}">
+
+               <view class="item" wx:for="{{dataArr}}" data-state="{{item.status}}" wx:key >
+
+                  <text class="icon-checkbox" data-id="{{item.id}}" data-checked="{{item.checked}}" data-index="{{index}}" bindtap="checkboxTap"></text>
+
+                   <view class="subtitle" bindtap="foldTap" data-index="{{index}}">{{item.academy_name}} ({{item.course.length}})</view>
+
+                   <text class="icon-collect icon-collect2" bindtap="collectTap" data-id="{{item.id}}" data-current="{{item.collection}}" data-index="{{index}}"></text>
+
+                   <view class="list">
+                       <view class="course" wx:for="{{item.course}}" wx:key wx:for-index="idx" data-current="{{itemName.collection}}" wx:for-item="itemName" >{{itemName.course_name
+}}<text class="icon-collect" bindtap="collect2Tap" data-current="{{itemName.collection}}" data-id="{{itemName.id}}" data-pidx="{{index}}" data-index="{{idx}}"></text></view>
+                        <view class="course clr" bindtap="detailTap" data-code="{{item.academy_code}}">收藏更多专业>></view>
+                   </view>
+               </view>
+            
+           </view> 
+  	   </view>
+  	   <!--学校 end-->
+
+      
+
+       <!-- 提示弹窗 -->
+      <view class="ui-pop-layout" data-show="{{tipPop}}">
+           <view class="ui-pop-center">
+              <view class="ui-pop-title">成为VIP</view>
+              <view class="ui-pop-content">
+                 <view class="ui-btn-group page-interval clearfix" data-state="{{vipState}}" data-status="{{groups_status}}">
+                     <view class="ui-btn-block" bindtap="vipPay1Tap">￥{{full_money}}两人团</view>
+                     <view class="ui-btn-block" bindtap="vipPay2Tap">{{member.btnText}}</view>
+                     <view class="ui-btn-block other-btn" bindtap="vipPay1Tap">我的团</view>
+                 </view>
+              </view>
+              <!--
+              <view class="ui-pop-footer clearfix">
+                <view class="ui-pop-btn">取消</view>
+                <view class="ui-pop-btn">确认</view>
+              </view>
+            -->
+           </view>
+           <view class="ui-pop-mask" bindtap="tipPopTap"></view>
+      </view>
+      <!-- 提示弹窗 end-->
+
+       <!-- 侧栏 -->
+      <view class="ui-btn-user" bindtap="sideTap"></view>
+       <sidebar style="{{sideShow?'display:block;':'display:none;'}}" paythis="{{paythis}}" binddisplay="sideShowfunction" bindtipPopTap="tipPopTap" />
+      <!-- 侧栏 end-->
+
+      <!-- 成为VIP弹框 -->
+      <buttonvip bindcustomevent="close" style="{{vipbecome?'display:block;':'display:none;'}}" />
+      <!-- 成为VIP弹框end -->
+
+      <!--回到首页-->
+       <view class="ui-btn-back" bindtap="backHomeTap"></view>
+	   
+  </view>
+  <!--内容 end-->
+
+  <view class="ui-footer-fixed bottom page-interval">
+           <view class="ui-btn-block" bindtap="volunteerTap">生成志愿表</view>
+  </view>
+
+  <!-- 三天体验弹框 与按钮 -->
+  <experiencevip bindcustomevent="mychild"  bindclose="vipclose" style="{{vipbtn?'display:block;':'display:none;'}}" />
+  <!--  三天体验弹框 end -->
+
+
+ <!-- 底部导航栏 -->
+ <footerlist stylestatus="收藏夹" />
+ 
+ 

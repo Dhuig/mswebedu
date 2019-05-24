@@ -1,0 +1,25 @@
+<view >
+  <view class='drawer_screen' style="{{status?'display:block;':'display:none;'}}" />
+  <view class="ui-btn-experience" bindtap="experienceTab">
+    <image src="../../images/icon_experienceVIP.png" mode="widthFix" style='width:100%;height:100%;'></image>
+  </view>
+  <view class='drawer_box' style="{{status?'display:block;':'display:none;'}}">
+    <image class='imagees' src="../../images/experienceVIP.png" mode="widthFix"></image>
+    <image class='image01' src="../../images/shut_down.png" mode="widthFix"  bindtap='cancleBtn' ></image>
+        <!-- mode="{{item.mode}}" -->
+    <view class='bottom'>
+      <form bindsubmit="formSubmit">
+        <view class='drawer_content'>
+          <!-- auto-focus='autofocus -->
+            <input class="input_base" hidden='{{false}}' name="temp_vip_name" bindinput="bindInputname" value="{{temp_vip_name}}" placeholder='请输入姓名' />
+            <input class="input_base" hidden='{{false}}' name="temp_vip_phone" bindinput="bindInputphone" value="{{temp_vip_phone}}" number maxlength='11'placeholder='请输入手机号' />
+        
+        </view>
+        <view class='sureQuery'>
+            <view bindtap='cancleBtn'  class='btn' >取消</view>
+            <button  form-type="submit" class='btnSure'>确定</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

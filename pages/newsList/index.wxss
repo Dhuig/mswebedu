@@ -1,0 +1,29 @@
+/**index.wxss**/
+
+
+.ui-path2-layout{ padding-bottom: 200rpx; }
+
+.banner{ height: 300rpx; background:#aaa url() no-repeat; background-size: cover; }
+
+.ui-news-layout .list .name{ margin-right: 80rpx; line-height: 1.2; }
+
+.ui-news-layout .list[data-state='2'] .label,.ui-news-layout .list[data-state='2'] .ui-news-tag{ display: none; }
+
+.ui-news-layout .list[data-type='1']:before{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-12.png); }
+
+.ui-news-layout .list[data-type='2']:before{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-1.png); }
+
+.ui-news-layout .list[data-state='2']:before{ background-image: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-2.png); }
+
+
+.other-btn{ display: none; }
+.ui-footer-fixed{ display: none; }
+.ui-footer-fixed[data-state="0"]{ display: block; }
+.ui-footer-fixed[data-status="0"] .ui-btn-group .ui-btn-block{ display: none; }
+.ui-footer-fixed[data-status="0"] .ui-btn-group .other-btn{ display: block; float: none; width: 100%; }
+
+
+
+/** 去掉拼团按钮 2018-06-13 **/
+.ui-footer-fixed .ui-btn-group .ui-btn-block:nth-child(1){ display: none; }
+.ui-footer-fixed .ui-btn-group .ui-btn-block:nth-child(2){ display:block; float: none; width: auto; }

@@ -1,0 +1,32 @@
+/*公共底部-菜单布局*/
+
+.public-footer-layout {
+  position:fixed;
+  left:0; bottom:0; 
+  width:100%; 
+  border-top:2rpx solid #ddd; 
+  background:#fff;
+}
+.public-footer-layout .menu{ 
+  float:left;
+  width:25%; 
+  padding:16rpx 0;
+  box-sizing:border-box; 
+  text-align:center; 
+  font-size:22rpx; 
+}
+.public-footer-layout .menu text{
+  color:#999;
+}
+
+.public-footer-layout .menu:nth-child(1){ border-left:none;}
+
+.public-footer-layout .menu i{ display:block; width:60rpx; height:32rpx; margin:0 auto 14rpx auto;vertical-align:middle; background: url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav1-curr.png) no-repeat center center; background-size:contain; -webkit-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.public-footer-layout .menu:nth-child(1) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav1-curr.png);}
+.public-footer-layout .menu:nth-child(2) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav2-curr.png);}
+.public-footer-layout .menu:nth-child(3) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav3-curr.png);}
+.public-footer-layout .menu:nth-child(4) i{ background-image:url(https://gaokaozhiyuan.oss-cn-shenzhen.aliyuncs.com/icon/icon-nav4-curr.png);}
+/* .public-footer-layout .menu[data-current='1'] text{ 
+  color: #19ad19; 
+} */
+/* .public-footer-layout .menu[data-current='true'] i{-webkit-filter: none;filter:none;filter:none;} */

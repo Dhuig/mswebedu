@@ -1,0 +1,30 @@
+/**index.wxss**/
+
+.banner{ height: 282rpx; background:#aaa url() no-repeat; background-size: cover; }
+.clusterInfo{ padding: 40rpx 0; }
+.clusterInfo .price{ font-size: 50rpx; color: #19ad19; font-family:"Arial"; }
+.clusterInfo .price .del{ font-size: 32rpx; color: #666; }
+.clusterInfo .subtitle{ padding: 40rpx 0; font-size: 32rpx; font-weight: 600; color: #000; }
+.clusterInfo .desc{ line-height: 1.4; color: #666; }
+
+
+.clusterItem .subtitle{ position: relative; text-align: center; }
+.clusterItem .subtitle text{ display: inline-block; position: relative; z-index: 3; padding: 0 20rpx; color: #666; background: #fff; }
+.clusterItem .subtitle:before{ content: ""; position: absolute; top: 50%; left:0; width: 100%; border-bottom: 2rpx solid #ddd; }
+.clusterItem .member-list{ padding: 40rpx 0; text-align: center; }
+.clusterItem .member-list .member{ display: inline-block; position: relative; width: 100rpx; height: 100rpx; margin:0 18rpx; vertical-align: middle; border-radius: 50%; background: #aaa url() no-repeat; background-size: cover;  }
+.clusterItem .member-list .member[data-cluster="0"]:before{ content: "团"; position: absolute; right: 0; top: 0; width:40rpx; height: 40rpx; border:2rpx solid #fff; text-align: center; line-height: 40rpx; font-size: 24rpx;   border-radius: 50%; color: #fff; background: #19ad19; }
+
+.clusterItem .ui-btn-block text{ display: none; }
+.clusterItem .ui-btn-block[data-state='0']:before{ content: "我要开团" }
+.clusterItem .ui-btn-block[data-state='1'] text{ display: block; line-height: 86rpx; }
+.clusterItem .ui-btn-block[data-state='2']{ display: none;  }
+.clusterItem .ui-btn-block[data-state='3']:before{ content: "我要参团"  }
+.clusterItem .ui-btn-block[data-state='4']{ background: #aaa; }
+.clusterItem .ui-btn-block[data-state='4']:before{ content: "不可参团"  }
+
+
+.clusterItem[data-state='0'] .subtitle,.clusterItem[data-state='0'] .member-list{ display: none; }
+
+.other-btn{ display: none; }
+/*.clusterItem[data-state='3'] .other-btn{ display: block; margin-top:30rpx; background: #f60;  }*/

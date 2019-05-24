@@ -1,0 +1,18 @@
+/** 弹窗 **/
+.ui-pop-layouts{position:fixed; left: 0; top: 0; width: 100%; bottom: 0; z-index: 88; }
+.ui-pop-layouts .ui-pop-center{ position: absolute; left: 50%; top: 50%; z-index: 3; width: 80%; transform: translate3d(-50%,-50%,0); -webkit-transform: translate3d(-50%,-50%,0); border-radius: 8rpx;  background: #fff; }
+
+/** 授权弹窗 **/
+.author-pops{ background-color: #fff; }
+.author-pops .logo{ display: block; width: 200rpx; height: 200rpx; margin:30rpx auto;   }
+.author-pops .protocol{ margin: 0 20rpx; padding: 20rpx; height: 500rpx; overflow: auto; border:2rpx solid #eee; }
+.author-pops .protocol .subtitle{ font-weight: 600; }
+.author-pops .protocol .text{ line-height: 2; color: #666; }
+.author-pops .ui-pop-action{ margin: 0 40rpx; }
+.author-pops .ui-pop-checkbox{ margin-top: 20rpx; }
+.author-pops .ui-pop-auth{ margin-top: 30rpx; background:#19ad19; border:none; color: #fff;  }
+.author-pops .ui-pop-auth:after{ display: none; }
+.author-pops .subtitle{ line-height: 1.2; color: #000; }
+.author-pops .author-list{ padding-top: 20rpx; }
+.author-pops .author-list .list{ position: relative; margin-bottom: 8rpx; line-height: 1.2; font-size: 24rpx; color: #999; }
+.author-pops .author-list .list:before{ content: ""; display:inline-block; width: 8rpx; height: 8rpx; margin-right: 6rpx; border-radius: 50%; vertical-align: middle; background:#eee;  }

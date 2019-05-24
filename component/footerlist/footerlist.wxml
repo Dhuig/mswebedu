@@ -1,0 +1,7 @@
+  <!-- 底部 -->
+  <view class="public-footer-layout">
+     <view class="menu" bindtap="newsLinkTap" data-content="{{item}}"  wx:for="{{list}}" wx:key>
+      <i style="{{item.status?'-webkit-filter: none;filter:none;filter:none;':''}}"></i>
+      <text style="{{item.status?'color: #19ad19;':' color:#999;'}}">{{item.content}}</text>
+     </view>
+  </view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/schoolQuery/index",
+    "pages/collect/index",
+    "pages/teacherList/index",
+    "pages/poster/index",
+    "pages/cluster/index",
+    "pages/recommend/index",
+    "pages/expenditure/index",
+    "pages/withdrawRecord/index",
+    "pages/withdraw/index",
+    "pages/newsList/index",
+    "pages/newsDetail/index",
+    "pages/schoolDetail/index",
+    "pages/schoolResult/index",
+    "pages/order/index",
+    "pages/vip/index",
+    "pages/videoDetail/index",
+    "pages/about/index",
+    "pages/version/index",
+    "pages/ranking/index",
+    "pages/teacherDetail/index",
+    "pages/volunteer/index",
+    "pages/volunteerDetail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "高考志愿服务",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "enablePullDownRefresh": true,
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于更好的为您提供服务。"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
